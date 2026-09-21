@@ -326,7 +326,7 @@ h1 .outline { color: transparent; -webkit-text-stroke: 1px #5d7180; }
 .contact-links span { color: #6d828d; }
 .contact-location { margin: 1.2rem 0 0; color: #718691; font: 400 .72rem/1.5 "JetBrains Mono", monospace; }
 
-.statusbar { position: fixed; z-index: 100; inset: auto 0 0 var(--sidebar); height: var(--statusbar); display: flex; align-items: center; gap: 1.2rem; padding: 0 .9rem; background: var(--green); color: #04231d; font: 500 .66rem/1 "JetBrains Mono", monospace; }
+.statusbar { position: fixed; z-index: 100; inset: auto 0 0 var(--sidebar); height: var(--statusbar); display: flex; align-items: center; gap: 1.2rem; padding: 0 .9rem; background: #070b10; color: var(--green); border-top: 1px solid var(--line); font: 500 .66rem/1 "JetBrains Mono", monospace; }
 
 @media (max-width: 1200px) and (min-width: 901px) {
   .hero-stage { grid-template-columns: minmax(0, 1fr) minmax(230px, .72fr); gap: 2rem; padding: 3.5rem 3rem; }
@@ -419,18 +419,7 @@ h1 .outline { color: transparent; -webkit-text-stroke: 1px #5d7180; }
   .hero-role span { margin-top: .65em; }
   .code-window__body { font-size: .7rem; overflow-wrap: anywhere; }
   .coordinate { font-size: .58rem; }
-  /* A saturated bar touching the bottom edge makes iOS Safari extend that
-     colour through its own toolbar and the home-indicator area, turning 30px
-     of status bar into ~128pt of green. Keeping the bar dark keeps the
-     browser chrome dark with it. */
-  .statusbar {
-    left: 0;
-    justify-content: space-between;
-    gap: .5rem;
-    background: #070b10;
-    color: var(--green);
-    border-top: 1px solid var(--line);
-  }
+  .statusbar { left: 0; justify-content: space-between; gap: .5rem; }
   .statusbar span:nth-child(2), .statusbar span:nth-child(4), .statusbar span:nth-child(5) { display: none; }
   .scene { min-height: auto; }
   .scene__sticky { position: relative; top: 0; min-height: auto; padding: 5.5rem 1.2rem 4.5rem; overflow: visible; }
