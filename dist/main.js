@@ -64,20 +64,21 @@
     event.preventDefault();
     closeMenu();
     goTo(section);
-    if (location.hash !== hash) history.pushState(null, '', hash);
+    // Deliberately not writing the fragment into the URL. The browser keeps a
+    // tab on its last address, so a stored "#mizaan" would reopen the site
+    // mid-story instead of at the top.
   });
 
-  window.addEventListener('popstate', () => {
-    const section = sectionFor(location.hash);
-    if (section) goTo(section);
-  });
+  // A scroll story has to begin at the beginning. Left on 'auto' the browser
+  // restores the previous offset, so reopening the tab drops you into
+  // whichever scene you happened to stop on.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   const deepLink = sectionFor(location.hash);
   if (deepLink) {
-    const hash = location.hash;
-    // The browser re-applies its own fragment scroll every time a late layout
-    // change lands, which undoes ours. Drop the fragment, place the view where
-    // the scene has actually played, then put the fragment back in the URL.
+    // A shared link like /#mizaan still lands on that scene. The fragment is
+    // dropped from the URL and left off: it also stops the browser re-applying
+    // its own fragment scroll every time a late layout change undoes ours.
     history.replaceState(null, '', location.pathname + location.search);
     const settle = () => {
       window.scrollTo({ top: targetFor(deepLink), behavior: 'instant' });
@@ -85,10 +86,8 @@
     };
     settle();
     window.addEventListener('load', settle);
-    (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => setTimeout(() => {
-      settle();
-      history.replaceState(null, '', hash);
-    }, 60));
+    (document.fonts ? document.fonts.ready : Promise.resolve())
+      .then(() => setTimeout(settle, 60));
   }
 
   // --- Mobile drawer ------------------------------------------------------
