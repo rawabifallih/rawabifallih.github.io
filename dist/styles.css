@@ -419,7 +419,18 @@ h1 .outline { color: transparent; -webkit-text-stroke: 1px #5d7180; }
   .hero-role span { margin-top: .65em; }
   .code-window__body { font-size: .7rem; overflow-wrap: anywhere; }
   .coordinate { font-size: .58rem; }
-  .statusbar { left: 0; justify-content: space-between; gap: .5rem; }
+  /* A saturated bar touching the bottom edge makes iOS Safari extend that
+     colour through its own toolbar and the home-indicator area, turning 30px
+     of status bar into ~128pt of green. Keeping the bar dark keeps the
+     browser chrome dark with it. */
+  .statusbar {
+    left: 0;
+    justify-content: space-between;
+    gap: .5rem;
+    background: #070b10;
+    color: var(--green);
+    border-top: 1px solid var(--line);
+  }
   .statusbar span:nth-child(2), .statusbar span:nth-child(4), .statusbar span:nth-child(5) { display: none; }
   .scene { min-height: auto; }
   .scene__sticky { position: relative; top: 0; min-height: auto; padding: 5.5rem 1.2rem 4.5rem; overflow: visible; }
