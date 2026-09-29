@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2305080c'/%3E%3Cpath d='M24 18 10 32l14 14M40 18l14 14-14 14M36 12 28 52' fill='none' stroke='%2340f6c7' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
 
   <!-- Social cards. Swap the relative paths for absolute https:// URLs once the
        production domain is final — X/Twitter requires absolute image URLs. -->
@@ -49,6 +49,7 @@
     "knowsAbout": [
       "Retrieval-Augmented Generation",
       "LangGraph",
+      "Go",
       "Python",
       "FastAPI",
       "React",
@@ -84,11 +85,12 @@
       <a class="file is-active" href="#identity" data-file="identity"><span>◇</span>01_identity.ts</a>
       <a class="file" href="#profile" data-file="profile"><span>◇</span>02_profile.ts</a>
       <a class="file" href="#capabilities" data-file="capabilities"><span>◇</span>03_capabilities.ts</a>
-      <a class="file" href="#mizaan" data-file="mizaan"><span>◇</span>04_mizaan.ai</a>
-      <a class="file" href="#cv-tailor" data-file="cv-tailor"><span>◇</span>05_cv-tailor.ai</a>
-      <a class="file" href="#graduation" data-file="graduation"><span>◇</span>06_reservation.java</a>
-      <a class="file" href="#journey" data-file="journey"><span>◇</span>07_journey.log</a>
-      <a class="file" href="#contact" data-file="contact"><span>◇</span>08_contact.sh</a>
+      <a class="file" href="#mihakk" data-file="mihakk"><span>◇</span>04_mihakk.sec</a>
+      <a class="file" href="#mizaan" data-file="mizaan"><span>◇</span>05_mizaan.ai</a>
+      <a class="file" href="#cv-tailor" data-file="cv-tailor"><span>◇</span>06_cv-tailor.ai</a>
+      <a class="file" href="#graduation" data-file="graduation"><span>◇</span>07_reservation.java</a>
+      <a class="file" href="#journey" data-file="journey"><span>◇</span>08_journey.log</a>
+      <a class="file" href="#contact" data-file="contact"><span>◇</span>09_contact.sh</a>
     </nav>
     <dl class="explorer__meta">
       <div><dt>LOCATION</dt><dd>Madinah, SA</dd></div>
@@ -110,11 +112,12 @@
         <div class="code-window" aria-label="Developer profile expressed as TypeScript">
           <div class="code-window__bar"><span>identity.ts</span><span>TypeScript · UTF-8</span></div>
           <div class="code-window__body">
-            <div class="line-numbers" aria-hidden="true">01<br>02<br>03<br>04<br>05<br>06<br>07<br>08</div>
+            <div class="line-numbers" aria-hidden="true">01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10</div>
             <code><span class="syntax-blue">export const</span> rawabi = {
   role: <span class="syntax-green">"Software + AI"</span>,
   foundation: <span class="syntax-green">"Computer Science"</span>,
   systems: [
+    <span class="syntax-violet">"Mihakk"</span>,
     <span class="syntax-violet">"Mizaan"</span>,
     <span class="syntax-violet">"CV Tailor"</span>
   ],
@@ -168,7 +171,7 @@
           <article class="capability-node reveal" data-in="0.46" data-out="0.66">
             <span class="node-index">MODULE_03</span>
             <h3>Systems + Data</h3>
-            <p>Docker · PostgreSQL · SQL Server · MySQL · AWS · Oracle · Active Directory</p>
+            <p>Go · Docker · PostgreSQL · SQL Server · MySQL · AWS · Oracle · Active Directory</p>
           </article>
           <div class="capability-bus" aria-hidden="true"><span></span><i></i><i></i><i></i></div>
         </div>
@@ -176,11 +179,37 @@
       </div>
     </section>
 
+    <section class="scene scene--project scene--mihakk" id="mihakk" data-route="mihakk.sec" aria-labelledby="mihakk-title">
+      <div class="scene__sticky project-stage">
+        <div class="coordinate" aria-hidden="true"><span>ROW 221 / COL 01</span><span>PROJECT_01 / MIHAKK</span></div>
+        <header class="project-intro reveal" data-in="0.02" data-out="0.2">
+          <p class="eyebrow">04_mihakk.sec / defensive web-application fuzzer</p>
+          <h2 id="mihakk-title">Break assumptions.<br><span>Keep scope intact.</span></h2>
+          <div class="project-summary">
+            <p>A defensive fuzzer that generates unexpected inputs so application owners can find crashes and unusual behavior—without turning testing into unrestricted traffic.</p>
+            <a class="source-link" href="https://github.com/rawabifallih/Mihakk" target="_blank" rel="noreferrer">VIEW SOURCE · GITHUB</a>
+          </div>
+        </header>
+
+        <div class="pipeline mihakk-pipeline" aria-label="Mihakk safety-first testing pipeline">
+          <article class="pipeline-node reveal" data-in="0.2" data-out="0.36"><small>01 / AUTHORIZE</small><b>Bounded scope</b><strong>24h</strong><span>expiring acknowledgement</span></article>
+          <article class="pipeline-node reveal" data-in="0.34" data-out="0.5"><small>02 / GENERATE</small><b>Deterministic mutation</b><strong>SHA-256</strong><span>reproducible input plan</span></article>
+          <article class="pipeline-node reveal" data-in="0.48" data-out="0.64"><small>03 / OBSERVE</small><b>Guarded execution</b><strong>0</strong><span>unlimited settings</span></article>
+          <article class="pipeline-node reveal" data-in="0.62" data-out="0.78"><small>04 / VERIFY</small><b>Evidence-first reports</b><strong>8</strong><span>implemented phases</span></article>
+          <div class="pipeline-flow" aria-hidden="true"><span></span></div>
+        </div>
+
+        <div class="project-proof reveal" data-in="0.78" data-out="0.94">
+          <span>GO ENGINE</span><span>FASTAPI</span><span>SQLITE</span><span>DOCKER</span><span>CONTROL API</span><span>WEB DASHBOARD</span><span>ISOLATED TESTBED</span><span>MIT LICENSE</span>
+        </div>
+      </div>
+    </section>
+
     <section class="scene scene--project scene--mizaan" id="mizaan" data-route="mizaan.ai" aria-labelledby="mizaan-title">
       <div class="scene__sticky project-stage">
-        <div class="coordinate" aria-hidden="true"><span>ROW 221 / COL 01</span><span>PROJECT_01 / MIZAAN</span></div>
+        <div class="coordinate" aria-hidden="true"><span>ROW 337 / COL 01</span><span>PROJECT_02 / MIZAAN</span></div>
         <header class="project-intro reveal" data-in="0.02" data-out="0.2">
-          <p class="eyebrow">04_mizaan.ai / Saudi Labor Law AI Assistant</p>
+          <p class="eyebrow">05_mizaan.ai / Saudi Labor Law AI Assistant</p>
           <h2 id="mizaan-title">Grounded law.<br><span>Traceable answers.</span></h2>
           <p>A multi-agent RAG system that answers Saudi labor-law questions in Arabic with article-level citations, confidence scoring, and clause-by-clause contract analysis.</p>
         </header>
@@ -201,9 +230,9 @@
 
     <section class="scene scene--project scene--cv" id="cv-tailor" data-route="cv-tailor.ai" aria-labelledby="cv-title">
       <div class="scene__sticky cv-stage">
-        <div class="coordinate" aria-hidden="true"><span>ROW 337 / COL 01</span><span>PROJECT_02 / CV_TAILOR</span></div>
+        <div class="coordinate" aria-hidden="true"><span>ROW 453 / COL 01</span><span>PROJECT_03 / CV_TAILOR</span></div>
         <header class="project-intro reveal" data-in="0.02" data-out="0.2">
-          <p class="eyebrow">05_cv-tailor.ai / job market + resume platform</p>
+          <p class="eyebrow">06_cv-tailor.ai / job market + resume platform</p>
           <h2 id="cv-title">A résumé connected<br><span>to the market.</span></h2>
           <p>An Arabic-first platform that optimizes résumés for ATS compatibility while preserving factual accuracy.</p>
         </header>
@@ -234,9 +263,9 @@
 
     <section class="scene scene--graduation" id="graduation" data-route="reservation.java" aria-labelledby="graduation-title">
       <div class="scene__sticky graduation-stage">
-        <div class="coordinate" aria-hidden="true"><span>ROW 452 / COL 01</span><span>PROJECT_03 / RESERVATION</span></div>
+        <div class="coordinate" aria-hidden="true"><span>ROW 568 / COL 01</span><span>PROJECT_04 / RESERVATION</span></div>
         <div class="graduation-copy reveal" data-in="0.04" data-out="0.3">
-          <p class="eyebrow">06_reservation.java / graduation project</p>
+          <p class="eyebrow">07_reservation.java / graduation project</p>
           <h2 id="graduation-title">The first complete<br><span>system.</span></h2>
           <p>Led the end-to-end development of a Java and MySQL appointment reservation application that simplified booking management and reduced manual scheduling time.</p>
           <small>TAIBAH UNIVERSITY · OCT 2021 — APR 2022</small>
@@ -254,9 +283,9 @@
 
     <section class="scene scene--journey" id="journey" data-route="journey.log" aria-labelledby="journey-title">
       <div class="scene__sticky journey-stage">
-        <div class="coordinate" aria-hidden="true"><span>ROW 521 / COL 01</span><span>SCENE_JOURNEY</span></div>
+        <div class="coordinate" aria-hidden="true"><span>ROW 637 / COL 01</span><span>SCENE_JOURNEY</span></div>
         <header class="section-heading reveal" data-in="0.02" data-out="0.2">
-          <p class="eyebrow">07_journey.log / verified history</p>
+          <p class="eyebrow">08_journey.log / verified history</p>
           <h2 id="journey-title">career.<span>timeline()</span></h2>
         </header>
 
@@ -264,15 +293,15 @@
           <article class="log-row reveal" data-in="0.16" data-out="0.34"><time>2022</time><span>✓</span><div><h3>Bachelor's Degree in Computer Science</h3><p>Taibah University</p></div><code>FOUNDATION</code></article>
           <article class="log-row reveal" data-in="0.3" data-out="0.48"><time>2024</time><span>↳</span><div><h3>Technical Support Specialist — Tamheer</h3><p>Digital Transformation Agency, Madinah Municipality</p></div><code>SYSTEMS / SUPPORT / DATA</code></article>
           <article class="log-row reveal" data-in="0.44" data-out="0.62"><time>2025</time><span>+</span><div><h3>Saudi Council of Engineers</h3><p>Membership of Assistant Engineer (Specialist)</p></div><code>ACCREDITED</code></article>
-          <article class="log-row reveal" data-in="0.58" data-out="0.76"><time>2026</time><span>◆</span><div><h3>Mizaan + CV Tailor</h3><p>Two independently designed production-grade systems</p></div><code>AI / FULL-STACK</code></article>
+          <article class="log-row reveal" data-in="0.58" data-out="0.76"><time>2026</time><span>◆</span><div><h3>Mihakk + Mizaan + CV Tailor</h3><p>Three independently designed software and AI systems</p></div><code>SECURITY / AI / FULL-STACK</code></article>
           <article class="log-row reveal" data-in="0.72" data-out="0.9"><time>2026</time><span>●</span><div><h3>AWS, Oracle Fusion + AI Agents</h3><p>Two AWS certifications, four Oracle credentials, and a project-based AI Agents bootcamp</p></div><code>CLOUD / AI / ENTERPRISE</code></article>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact" data-route="contact.sh" aria-labelledby="contact-title">
-      <div class="coordinate" aria-hidden="true"><span>ROW 614 / COL 01</span><span>SCENE_CONTACT</span></div>
-      <p class="eyebrow">08_contact.sh / ready</p>
+      <div class="coordinate" aria-hidden="true"><span>ROW 730 / COL 01</span><span>SCENE_CONTACT</span></div>
+      <p class="eyebrow">09_contact.sh / ready</p>
       <h2 id="contact-title">Let's build the next<br><span>useful system.</span></h2>
       <div class="contact-links">
         <a href="mailto:Rawabifalih@gmail.com"><span>01</span>Email<i>↗</i></a>
@@ -285,9 +314,9 @@
   </main>
 
   <footer class="statusbar" aria-label="Technology status">
-    <span>main*</span><span>0 errors</span><span>Python</span><span>TypeScript</span><span>Docker</span><span>Ln 1, Col 1</span>
+    <span>main*</span><span>0 errors</span><span>Go</span><span>Python</span><span>TypeScript</span><span>Ln 1, Col 1</span>
   </footer>
 
-  <script src="main.js?v=14"></script>
+  <script src="main.js?v=15"></script>
 </body>
 </html>
